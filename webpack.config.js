@@ -23,7 +23,7 @@ module.exports = {
         // colors: true,
         historyApiFallback: true,
         inline: true,
-        port: 8888,
+        port: 8080,
     // process: true,
     }
 };
