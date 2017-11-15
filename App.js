@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-alert("zhixing")
+import React, { Component } from 'react';
+
 class App extends Component {
     render() {
         return (

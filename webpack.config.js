@@ -2,10 +2,11 @@ var webpack = require('webpack');
 var path = require('path')
 //__dirname是node.js中的一个全局变量，它指向当前执行脚本所在的目录
 module.exports = {
-    entry: ['webpack/hot/dev-server', __dirname + "/index.js"],
+    entry: ['webpack/hot/dev-server', "webpack-dev-server/client?http://localhost:3008", __dirname + "/index.js"],
     output: {
         path: __dirname + "/build",
-        filename: "bundle.js"
+        filename: "bundle.js",
+        publicPath: "/build"
     },
     module: {
         loaders: [
@@ -24,6 +25,6 @@ module.exports = {
         historyApiFallback: true,
         inline: true,
         port: 3008,
-        compress: true,
+        compress: true
     }
 };
