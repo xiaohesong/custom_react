@@ -4,7 +4,9 @@ import MainLayout from './src/MainLayout'
 class App extends Component {
     render() {
         return (
-            <MainLayout />
+            <MainLayout>
+            	Hello Word
+            </MainLayout>
         )
     }
 
