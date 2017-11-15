@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import MainLayout from './src/MainLayout'
 
 class App extends Component {
     render() {
         return (
-            <h1>Hello Word</h1>
+            <MainLayout />
         )
     }
 
