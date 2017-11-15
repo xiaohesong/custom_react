@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var path = require('path')
 //__dirname是node.js中的一个全局变量，它指向当前执行脚本所在的目录
 module.exports = {
     entry: ['webpack/hot/dev-server', __dirname + "/index.js"],
@@ -19,11 +20,10 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin() //热模块替换插件
     ],
     devServer: {
-        contentBase: './build',
-        // colors: true,
+        contentBase: path.join(__dirname, "/public"),
         historyApiFallback: true,
         inline: true,
-        port: 8080,
-    // process: true,
+        port: 3008,
+        compress: true,
     }
 };
