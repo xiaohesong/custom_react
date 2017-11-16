@@ -44,5 +44,8 @@ module.exports = {
         port: 3008,
         compress: true,
         progress: true,
-    }
+    },
+    performance: {
+        hints: "warning"
+    }, //Show warning if the size of js file > 250KB, type: false | warning | error
 };
