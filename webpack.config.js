@@ -1,5 +1,8 @@
 var webpack = require('webpack');
 var path = require('path')
+var ExtractTextPlugin = require("extract-text-webpack-plugin"); //样式抽取成独立文件
+// https://github.com/webpack-contrib/extract-text-webpack-plugin
+
 //__dirname是node.js中的一个全局变量，它指向当前执行脚本所在的目录
 module.exports = {
     entry: ['webpack/hot/dev-server', __dirname + "/index.js"],
@@ -36,6 +39,12 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(), //热模块替换插件
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "vendor",
+            filename: "vendor.bundle.js",
+        // chunks: ['react', 'antd'],
+        }),
+        new ExtractTextPlugin("css/[name].css")
     ],
     devServer: {
         contentBase: path.join(__dirname, "/public"),
