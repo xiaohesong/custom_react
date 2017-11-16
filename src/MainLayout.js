@@ -19,7 +19,6 @@ class SiderDemo extends React.Component {
     }
 
     render() {
-        console.log("main layout props is", this.props)
         return (
             <Layout style={{
                 minHeight: '100vh'

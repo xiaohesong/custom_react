@@ -5,7 +5,6 @@ const {Header, Content, Footer} = Layout;
 
 class MyContent extends React.Component {
     render() {
-        console.log("content props is", this.props)
         return (
             <Layout>
             <Header style={{
