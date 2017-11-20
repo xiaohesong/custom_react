@@ -38,7 +38,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(), //热模块替换插件
+        // new webpack.HotModuleReplacementPlugin(), //热模块替换插件, devServer也可以添加
         new webpack.optimize.CommonsChunkPlugin({
             name: "vendor",
             filename: "vendor.bundle.js",
@@ -53,7 +53,9 @@ module.exports = {
         port: 3008,
         compress: true,
         progress: true,
+        hot: true
     },
+    // Config options http://webpack.github.io/docs/webpack-dev-server.html#webpack-dev-server-cli
     performance: {
         hints: "warning"
     }, //Show warning if the size of js file > 250KB, type: false | warning | error
