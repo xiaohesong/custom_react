@@ -41,6 +41,13 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: 'style-loader!css-loader?importLoaders=1',
+            },
+            {
+              //https://webpack.js.org/guides/asset-management/#loading-images
+              test: /\.(png|svg|jpg|gif)$/,
+              use: [
+                'file-loader'
+              ]
             }
         ]
     },
