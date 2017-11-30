@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path')
 var ExtractTextPlugin = require("extract-text-webpack-plugin"); //样式抽取成独立文件
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 // https://github.com/webpack-contrib/extract-text-webpack-plugin
 
 //__dirname是node.js中的一个全局变量，它指向当前执行脚本所在的目录
@@ -24,10 +25,16 @@ module.exports = {
                         "stage-0"
                     ],
                     plugins: [
+                      ["transform-runtime", {
+                        "helpers": false, // defaults to true
+                        "polyfill": false, // defaults to true
+                        "regenerator": true, // defaults to true
+                        "moduleName": "babel-runtime" // defaults to "babel-runtime"
+                      }],
                         ["import", {
                             libraryName: "antd",
                             style: "css"
-                        }],
+                        }]
                     ]
                 }
             },
@@ -39,6 +46,22 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(), //热模块替换插件, devServer也可以添加
+        // new HtmlWebpackPlugin({
+        //   inject: true,
+        //   template: __dirname + "/public/index.html",
+        //   minify: {
+        //     removeComments: true,
+        //     collapseWhitespace: true,
+        //     removeRedundantAttributes: true,
+        //     useShortDoctype: true,
+        //     removeEmptyAttributes: true,
+        //     removeStyleLinkTypeAttributes: true,
+        //     keepClosingSlash: true,
+        //     minifyJS: true,
+        //     minifyCSS: true,
+        //     minifyURLs: true
+        //   }
+        // }),
         new webpack.optimize.CommonsChunkPlugin({
             name: "vendor",
             filename: "vendor.bundle.js",

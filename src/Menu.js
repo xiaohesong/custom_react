@@ -1,5 +1,6 @@
 import React from 'react'
-import {Menu, Icon} from 'antd'
+import {Menu, Icon} from 'antd';
+import {Link} from 'react-router-dom'
 const SubMenu = Menu.SubMenu;
 
 class MyMenu extends React.Component {
