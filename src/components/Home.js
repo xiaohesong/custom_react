@@ -1,3 +1,5 @@
+import React from 'react'
+
 const Home = () => {
   return (<h1>It's My Home</h1>)
 }

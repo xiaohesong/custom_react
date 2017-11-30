@@ -2,6 +2,7 @@ import React from 'react'
 import {Menu, Icon} from 'antd';
 import {Link} from 'react-router-dom'
 const SubMenu = Menu.SubMenu;
+import "./stylesheets/css/Menu.css"
 
 class MyMenu extends React.Component {
   render() {

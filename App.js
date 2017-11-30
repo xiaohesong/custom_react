@@ -9,8 +9,8 @@ class App extends Component {
       <Switch>
         <MainLayout>
           {
-            routes.forEach((item, i) => {
-              return (<Route exact="exact" key={i} path={`${item.path}`} component={item.component}/>)
+            routes.map((item, i) => {
+              return (<Route exact key={i} path={`${item.path}`} component={item.component}/>)
             })
           }
         </MainLayout>
