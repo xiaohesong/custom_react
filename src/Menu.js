@@ -11,7 +11,9 @@ class MyMenu extends React.Component {
       </Menu.Item>
       <Menu.Item key="2">
         <Icon type="desktop"/>
-        <span>Option 2</span>
+        <Link to="/">
+          <span>Option 2</span>
+        </Link>
       </Menu.Item>
       <SubMenu key="sub1" title={<span> < Icon type = "user" />< span > User</span></span>}>
         <Menu.Item key="3">Tom</Menu.Item>
