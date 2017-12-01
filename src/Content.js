@@ -7,15 +7,12 @@ class MyContent extends React.Component {
   render() {
     return (<Layout>
       <Header style={{
-          background: '#fff',
-          padding: 0,
-          textAlign: 'center'
+          textAlign: 'center',
+          backgroundColor: '#ecf6fd'
         }}>
         It's My Header
       </Header>
-      <Content style={{
-          margin: '0 16px'
-        }}>
+      <Content style={{marginTop: 0}}>
         <div>
           {this.props.children}
         </div>

@@ -1,11 +1,40 @@
-import React from 'react'
+import React from 'react';
+import {Table} from 'antd';
+import "../../stylesheets/css/Table.css"
 
 class User extends React.Component {
   render() {
     return(
-      <h2>这里是用户列表</h2>
+      <Table dataSource={dataSource} columns={columns} />
     )
   }
 }
 
 export default User
+
+
+const dataSource = [{
+  key: '1',
+  name: '胡彦斌',
+  age: 32,
+  address: '西湖区湖底公园1号'
+}, {
+  key: '2',
+  name: '胡彦祖',
+  age: 42,
+  address: '西湖区湖底公园1号'
+}];
+
+const columns = [{
+  title: '姓名',
+  dataIndex: 'name',
+  key: 'name',
+}, {
+  title: '年龄',
+  dataIndex: 'age',
+  key: 'age',
+}, {
+  title: '住址',
+  dataIndex: 'address',
+  key: 'address',
+}];
