@@ -9,12 +9,14 @@ class MyMenu extends React.Component {
     return (<Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
       <Menu.Item key="1">
         <Icon type="pie-chart"/>
-        <span>Option 1</span>
+        <Link to="/">
+          <span>Home</span>
+        </Link>
       </Menu.Item>
       <Menu.Item key="2">
         <Icon type="desktop"/>
-        <Link to="/">
-          <span>Option 2</span>
+        <Link to="/users">
+          <span>用户</span>
         </Link>
       </Menu.Item>
       <SubMenu key="sub1" title={<span> < Icon type = "user" />< span > User</span></span>}>
