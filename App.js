@@ -6,15 +6,15 @@ import routes from './src/routes'
 class App extends Component {
   render() {
     return (<Router>
-      <Switch>
-        <MainLayout>
+      <MainLayout>
+        <Switch>
           {
             routes.map((item, i) => {
               return (<Route exact key={i} path={`${item.path}`} component={item.component}/>)
             })
           }
-        </MainLayout>
-      </Switch>
+        </Switch>
+      </MainLayout>
     </Router>)
   }
 
